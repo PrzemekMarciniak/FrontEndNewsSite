@@ -26,7 +26,8 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-
+	margin-bottom: 5px;
+	margin-top: 0;
 }
 
 ol, ul {
@@ -84,6 +85,12 @@ a:focus {
 	padding-bottom: 20px;
 }
 
+.news-item:last-child {
+	border-bottom: 0;
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
 .news-link {
 	font-size: 24px;
 	color: #3f51b5;
@@ -95,6 +102,16 @@ a:focus {
 	display: inline;
 	margin-right: 15px;
 }
+
+/*-----------------------------------------------
+*   Contant
+-----------------------------------------------*/
+
+.content {
+	margin-bottom: 20px;
+}
+
+
 /*-----------------------------------------------
 *   Container
 -----------------------------------------------*/
@@ -143,6 +160,65 @@ a:focus {
 	opacity: 1;
 	visibility: visible;
 	transition: opacity 0.2 ease-in-out, visibility 0.2 ease-in-out;
+}
+
+/*-----------------------------------------------
+*   Modal
+-----------------------------------------------*/
+
+.modal {
+	background-color: #fff;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
+	left: 50%;
+	opacity: 0;
+	position: absolute;
+	top: 40px;
+	transform: translate(-50%, 0);
+	visibility: hidden;
+	width: 500px;
+	z-index: 2;
+}
+
+.modal.is-visible {
+	opacity: 1;
+	visibility: visible;
+}
+
+.modal-media {
+	position: relative;
+}
+
+.modal-media-title {
+	color: #fff;
+	bottom: 20px;
+	left: 20px;
+	font-size: 28px;
+	position: absolute;
+}
+
+.modal-content {
+	padding: 20px;
+}
+
+.modal-overlay {
+	background-color: #212121;
+	bottom: 0;
+	height: 100%;
+	left: 0;
+	opacity: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	visibility: hidden;
+	width: 100%;
+	z-index: 1;
+}
+
+.modal-overlay.is-visible {
+	opacity: 0.4;
+	visibility: visible;
 }
 
 /*-----------------------------------------------
